@@ -12,7 +12,6 @@
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-    const root = document.getElementById("root");
     const Title = () => (
       <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
         Hello I'm a title
@@ -49,6 +48,7 @@
       </div>
     );
     // const Container = React.createElement("div", null, [Title, Button]);
+    const root = document.getElementById("root");
     ReactDOM.render(<Container />, root);
   </script>
 </html>
