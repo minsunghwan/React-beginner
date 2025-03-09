@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    const root = document.getElementById("root");
+
+    const Title = () => (
+      <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+        Hello I'm h3
+      </h3>
+    );
+
+    // const h3 = React.createElement(
+    //   "h3",
+    //   { onMouseEnter: () => console.log("mouse enter") },
+    //   "Hello I'm sapn"
+    // );
+
+    const Button = () => (
+      <button
+        style={{ backgroundColor: "tomato" }}
+        onClick={() => console.log("im clicked")}
+      >
+        Click me
+      </button>
+    );
+    // const btn = React.createElement(
+    //   "button",
+    //   { onClick: () => console.log("i'm clicked") },
+    //   "Click me"
+    // );
+
+    const MinConponent = () => (
+      <button
+        id="minbtn1"
+        onClick={() => console.log("나의 버튼이 만들어 졌습니다.")}
+        style={{ color: "red", backgroundColor: "blue" }}
+      >
+        Mins Button
+      </button>
+    );
+    const Container = () => (
+      <div>
+        <Title />
+        <Button />
+        <MinConponent />
+      </div>
+    );
+    ReactDOM.render(<Container />, root);
+  </script>
+</html>
